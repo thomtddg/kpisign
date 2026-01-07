@@ -3,12 +3,14 @@ databases:
     plan: basic-256mb
     databaseName: docuseal
     user: docuseal
+    region: frankfurt
 
 services:
   - type: web
     name: docuseal
     runtime: docker
     plan: starter
+    region: frankfurt
     healthCheckPath: /up
     disk:
       name: docuseal-storage
