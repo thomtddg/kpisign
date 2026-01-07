@@ -1,6 +1,6 @@
 databases:
   - name: docuseal-db
-    plan: starter
+    plan: basic
     databaseName: docuseal
     user: docuseal
 
@@ -10,7 +10,6 @@ services:
     runtime: docker
     plan: starter
     healthCheckPath: /up
-    ipAllowList: []
     disk:
       name: docuseal-storage
       mountPath: /data
