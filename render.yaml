@@ -28,4 +28,7 @@ services:
       - key: WORKDIR
         value: /data
       - key: HOST
-        sync: false
+        fromService:
+          name: docuseal
+          type: web
+          property: host
