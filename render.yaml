@@ -15,6 +15,7 @@ services:
     runtime: docker
     plan: starter
     healthCheckPath: /up
+    ipAllowList: []
     disk:
       name: docuseal-storage
       mountPath: /data
@@ -45,6 +46,7 @@ services:
     runtime: docker
     dockerCommand: bundle exec sidekiq -C config/sidekiq.yml
     plan: starter
+    ipAllowList: []
     envVars:
       - key: DATABASE_URL
         fromDatabase:
